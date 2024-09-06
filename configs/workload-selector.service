@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve my workload selector Flask app
+After=network.target
+
+[Service]
+User=redhat
+WorkingDirectory=/home/redhat/toughbook_demo_webapp/
+Environment="PATH=/usr/local/bin:/usr/bin:/home/redhat/toughbook_demo_webapp/venv/bin:$PATH"
+ExecStart=/home/redhat/toughbook_demo_webapp/venv/bin/gunicorn --workers 3 --timeout 300 app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

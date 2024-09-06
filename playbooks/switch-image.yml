@@ -1,0 +1,15 @@
+---
+- name: Switch to a specified bootc image and reboot
+  hosts: all
+  become: yes
+  tasks:
+    - name: Switch to the specified BootC image
+      community.general.bootc_manage:
+        image: "192.168.8.200:5000/bootc-flightgear:{{ bootc_image_tag }}"
+        state: switch
+      register: bootc_result
+
+    - name: Display the stdout from bootc_manage command
+      debug:
+        var: bootc_result.stdout
+

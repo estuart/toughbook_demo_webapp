@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes  # Use sudo to run the reboot task
+  tasks:
+    - name: Forcefully reboot the machine
+      ansible.builtin.reboot:
+        msg: "Forceful reboot initiated by Ansible"
+        pre_reboot_delay: 0
+        post_reboot_delay: 10  # Wait 30 seconds after reboot before continuing
+
+    - name: Exit after reboot
+      ansible.builtin.debug:
+        msg: "Reboot complete. Exiting playbook."
