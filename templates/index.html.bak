@@ -33,21 +33,6 @@
         .button:hover {
             background-color: #0056b3;
         }
-	.red-button {
-            background-color: #FE2712;
-        }
-
-        .red-button:hover {
-            background-color: #B82214;
-        }
-
-        .green-button {
-            background-color: #58B814;
-        }
-
-        .green-button:hover {
-            background-color: #3E810E;
-        }
 
         .loading {
             font-size: 24px;
@@ -111,15 +96,15 @@
 
     <!-- Buttons for the workloads -->
     <button class="button" onclick="runWorkload('f22')">F22</button>
+    <button class="button" onclick="runWorkload('f35')">F35</button>
     <button class="button" onclick="runWorkload('b52')">B52</button>
-    <button class="button red-button" onclick="runWorkload('f35')">F35</button>
-    <button class="button green-button" onclick="runWorkload('f35-fixed')">F35</button>
     <!-- <button class="button" onclick="runWorkload('f22-broken')">F22 - Broken</button> -->
-    <!-- <button class="button" onclick="runWorkload('f35-broken')">F35 - Broken</button> -->
+    <button class="button" onclick="runWorkload('f35-broken')">F35 - Broken</button>
     <!-- <button class="button" onclick="runWorkload('b52-broken')">B52 - Broken</button> -->
     <!-- <button class="button" onclick="runWorkload('f22-fixed')">F22 - Fixed</button> -->
+    <button class="button" onclick="runWorkload('f35-fixed')">F35 - Fixed</button>
     <!-- <button class="button" onclick="runWorkload('b52-fixed')">B52 - Fixed</button> -->
-    <button class="button" onclick="runWorkload('base')">Browser</button>
+    <button class="button" onclick="runWorkload('base')">Base Image</button>
 
     <div class="loading" id="loading">Executing, please wait...</div>
 

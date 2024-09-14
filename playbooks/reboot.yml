@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  gather_facts: no
   become: yes  # Use sudo to run the reboot task
   tasks:
     - name: Forcefully reboot the machine

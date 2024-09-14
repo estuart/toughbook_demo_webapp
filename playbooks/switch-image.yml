@@ -1,6 +1,7 @@
 ---
 - name: Switch to a specified bootc image and reboot
   hosts: all
+  gather_facts: no
   become: yes
   tasks:
     - name: Switch to the specified BootC image
